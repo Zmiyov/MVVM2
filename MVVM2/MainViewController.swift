@@ -58,10 +58,13 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MVVMTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MVVMTableViewCell
         
-        cell.cellConfigure(nameLabelText: "Name", secondNameLabelText: "Second")
+        guard let cell = cell else { return UITableViewCell() }
         
+        let profile = profiles[indexPath.row]
+        
+        cell.cellConfigure(ageLabelText: "\(profile.age)", fullNameLabelText: "\(profile.name) \(profile.secondName)")
         
         return cell
     }

@@ -9,7 +9,7 @@ import UIKit
 
 class MVVMTableViewCell: UITableViewCell {
 
-    private let nameLabel: UILabel = {
+    private let ageLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Apple SD Gothic Neo", size: 16)
 
@@ -17,7 +17,7 @@ class MVVMTableViewCell: UITableViewCell {
         return label
     }()
     
-    private let secondNameLabel: UILabel = {
+    private let fullNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Apple SD Gothic Neo", size: 16)
 
@@ -40,17 +40,17 @@ class MVVMTableViewCell: UITableViewCell {
         contentView.backgroundColor = .white
         contentView.alpha = 0.5
         
-        addSubview(nameLabel)
-        addSubview(secondNameLabel)
+        addSubview(ageLabel)
+        addSubview(fullNameLabel)
     }
     
-    private func configure(nameLabelText: String, secondNameLabelText: String) {
-        nameLabel.text = nameLabelText
-        secondNameLabel.text = secondNameLabelText
+    private func configure(ageLabelText: String, fullNameLabelText: String) {
+        ageLabel.text = ageLabelText
+        fullNameLabel.text = fullNameLabelText
     }
     
-    public func cellConfigure(nameLabelText: String, secondNameLabelText: String) {
-        configure(nameLabelText: nameLabelText, secondNameLabelText: secondNameLabelText)
+    public func cellConfigure(ageLabelText: String, fullNameLabelText: String) {
+        configure(ageLabelText: ageLabelText, fullNameLabelText: fullNameLabelText)
     }
     
 }
@@ -59,17 +59,13 @@ extension MVVMTableViewCell {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            
-            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            fullNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            fullNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            
-            secondNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            
-            secondNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            ageLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }
