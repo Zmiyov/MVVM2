@@ -23,6 +23,7 @@
 		A55118A12905978D006E01DC /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A02905978D006E01DC /* TextLabel.swift */; };
 		A55118A329059A6D006E01DC /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A229059A6D006E01DC /* DetailViewModelType.swift */; };
 		A55118A529059AD8006E01DC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A429059AD8006E01DC /* DetailViewModel.swift */; };
+		A55118A72905B513006E01DC /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A62905B512006E01DC /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A55118A02905978D006E01DC /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		A55118A229059A6D006E01DC /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
 		A55118A429059AD8006E01DC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A55118A62905B512006E01DC /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				A551187729056EEA006E01DC /* AppDelegate.swift */,
 				A551187929056EEA006E01DC /* SceneDelegate.swift */,
+				A55118A62905B512006E01DC /* Box.swift */,
 				A551188E290576CA006E01DC /* Model */,
 				A551188B29056FD3006E01DC /* Views */,
 				A551189729058AC1006E01DC /* ViewModel */,
@@ -216,6 +219,7 @@
 				A5511890290576DD006E01DC /* Profile.swift in Sources */,
 				A551188D2905703D006E01DC /* TableView.swift in Sources */,
 				A551187829056EEA006E01DC /* AppDelegate.swift in Sources */,
+				A55118A72905B513006E01DC /* Box.swift in Sources */,
 				A55118A529059AD8006E01DC /* DetailViewModel.swift in Sources */,
 				A551187A29056EEA006E01DC /* SceneDelegate.swift in Sources */,
 				A55118A329059A6D006E01DC /* DetailViewModelType.swift in Sources */,

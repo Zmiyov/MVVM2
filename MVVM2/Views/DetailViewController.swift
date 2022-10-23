@@ -29,6 +29,15 @@ class DetailViewController: UIViewController {
         
         setViews()
         setConstraints()
+        
+        viewModel?.age.bind { [unowned self] in
+            guard let string = $0 else { return }
+            self.label.text = string
+        }
+        
+        delay(delay: 5) { [unowned self] in
+            self.viewModel?.age.value = "Some new value"
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +46,15 @@ class DetailViewController: UIViewController {
         guard let viewModel = viewModel else { return }
         self.label.text = viewModel.description
     }
+    
+    private func delay(delay: Double, closure: @escaping () -> ()) {
+        
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + delay) {
+            closure()
+        }
+    }
+    
+    
 
     func setViews() {
         view.addSubview(label)
