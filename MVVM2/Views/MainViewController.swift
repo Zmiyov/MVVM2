@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var profiles: [Profile]!
+    var viewModel: TableViewModelType?
     
     let tableView = TableView(frame: .zero, style: .plain)
     
@@ -18,9 +18,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .gray
         
-        profiles = [Profile(name: "David", secondName: "Usher", age: 23),
-                    Profile(name: "Sara", secondName: "Connor", age: 19),
-                    Profile(name: "Arni", secondName: "Giga", age: 45)]
+        viewModel = ViewModel()
+        
+       
         
         setView()
         setDelegates()
@@ -54,17 +54,17 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profiles.count
+        return viewModel?.numberOfRows ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MVVMTableViewCell
         
-        guard let cell = cell else { return UITableViewCell() }
+        guard let cell = cell, let viewModel = viewModel else { return UITableViewCell() }
         
-        let profile = profiles[indexPath.row]
-        
-        cell.cellConfigure(ageLabelText: "\(profile.age)", fullNameLabelText: "\(profile.name) \(profile.secondName)")
+//        let profile = viewModel.profiles[indexPath.row]
+//        
+//        cell.cellConfigure(ageLabelText: "\(profile.age)", fullNameLabelText: "\(profile.name) \(profile.secondName)")
         
         return cell
     }
