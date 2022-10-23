@@ -10,10 +10,21 @@ import UIKit
 class DetailViewController: UIViewController {
     
     let label = TextLabel()
+    
+    var viewModel: DetailViewModelType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setViews()
+        setConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let viewModel = viewModel else { return }
+        self.label.text = viewModel.description
     }
 
     func setViews() {
