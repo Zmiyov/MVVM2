@@ -23,6 +23,6 @@ class TableView: UITableView {
     
     private func configure() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .green
+        backgroundColor = .systemMint
     }
 }

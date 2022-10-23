@@ -69,6 +69,9 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        guard let viewModel = viewModel else { return }
+        viewModel.selectRow(atIndexPath: indexPath)
+
+        navigationController?.pushViewController(DetailViewController(viewModel: viewModel.viewModelForSelectedRow()), animated: true)
     }
 }
