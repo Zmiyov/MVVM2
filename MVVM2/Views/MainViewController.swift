@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var viewModel: TableViewModelType?
+    var viewModel: TableViewViewModelType?
     
     let tableView = TableView(frame: .zero, style: .plain)
     
@@ -19,8 +19,6 @@ class MainViewController: UIViewController {
         view.backgroundColor = .gray
         
         viewModel = ViewModel()
-        
-       
         
         setView()
         setDelegates()
@@ -61,6 +59,10 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MVVMTableViewCell
         
         guard let cell = cell, let viewModel = viewModel else { return UITableViewCell() }
+        
+        let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+        
+        cell.viewModel = cellViewModel
         
 //        let profile = viewModel.profiles[indexPath.row]
 //        

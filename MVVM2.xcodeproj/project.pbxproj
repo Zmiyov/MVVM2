@@ -16,7 +16,9 @@
 		A5511890290576DD006E01DC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551188F290576DD006E01DC /* Profile.swift */; };
 		A5511892290579A1006E01DC /* MVVMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5511891290579A1006E01DC /* MVVMTableViewCell.swift */; };
 		A55118942905890B006E01DC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118932905890B006E01DC /* ViewModel.swift */; };
-		A551189629058A08006E01DC /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189529058A08006E01DC /* TableViewModelType.swift */; };
+		A551189629058A08006E01DC /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189529058A08006E01DC /* TableViewViewModelType.swift */; };
+		A551189B29058E1E006E01DC /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189A29058E1E006E01DC /* TableViewCellViewModelType.swift */; };
+		A551189D29058F30006E01DC /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189C29058F30006E01DC /* TableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,9 @@
 		A551188F290576DD006E01DC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A5511891290579A1006E01DC /* MVVMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTableViewCell.swift; sourceTree = "<group>"; };
 		A55118932905890B006E01DC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		A551189529058A08006E01DC /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
+		A551189529058A08006E01DC /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
+		A551189A29058E1E006E01DC /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
+		A551189C29058F30006E01DC /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A55118932905890B006E01DC /* ViewModel.swift */,
+				A551189C29058F30006E01DC /* TableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -106,7 +111,8 @@
 		A551189829058AD6006E01DC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A551189529058A08006E01DC /* TableViewModelType.swift */,
+				A551189529058A08006E01DC /* TableViewViewModelType.swift */,
+				A551189A29058E1E006E01DC /* TableViewCellViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -189,13 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A551189D29058F30006E01DC /* TableViewCellViewModel.swift in Sources */,
 				A551187C29056EEA006E01DC /* MainViewController.swift in Sources */,
-				A551189629058A08006E01DC /* TableViewModelType.swift in Sources */,
+				A551189629058A08006E01DC /* TableViewViewModelType.swift in Sources */,
 				A5511892290579A1006E01DC /* MVVMTableViewCell.swift in Sources */,
 				A5511890290576DD006E01DC /* Profile.swift in Sources */,
 				A551188D2905703D006E01DC /* TableView.swift in Sources */,
 				A551187829056EEA006E01DC /* AppDelegate.swift in Sources */,
 				A551187A29056EEA006E01DC /* SceneDelegate.swift in Sources */,
+				A551189B29058E1E006E01DC /* TableViewCellViewModelType.swift in Sources */,
 				A55118942905890B006E01DC /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

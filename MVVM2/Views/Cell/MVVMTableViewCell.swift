@@ -8,6 +8,15 @@
 import UIKit
 
 class MVVMTableViewCell: UITableViewCell {
+    
+    weak var viewModel: TableViewCellViewModelType? {
+        willSet(viewModel) {
+            guard let viewModel = viewModel else { return }
+            fullNameLabel.text = viewModel.fullName
+            ageLabel.text = viewModel.age 
+        }
+    }
+    
 
     private let ageLabel: UILabel = {
         let label = UILabel()
