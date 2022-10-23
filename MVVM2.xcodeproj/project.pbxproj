@@ -14,6 +14,7 @@
 		A551188429056EED006E01DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A551188229056EED006E01DC /* LaunchScreen.storyboard */; };
 		A551188D2905703D006E01DC /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551188C2905703D006E01DC /* TableView.swift */; };
 		A5511890290576DD006E01DC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551188F290576DD006E01DC /* Profile.swift */; };
+		A5511892290579A1006E01DC /* MVVMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5511891290579A1006E01DC /* MVVMTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A551188529056EED006E01DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A551188C2905703D006E01DC /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		A551188F290576DD006E01DC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A5511891290579A1006E01DC /* MVVMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				A551188C2905703D006E01DC /* TableView.swift */,
+				A5511891290579A1006E01DC /* MVVMTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A551187C29056EEA006E01DC /* MainViewController.swift in Sources */,
+				A5511892290579A1006E01DC /* MVVMTableViewCell.swift in Sources */,
 				A5511890290576DD006E01DC /* Profile.swift in Sources */,
 				A551188D2905703D006E01DC /* TableView.swift in Sources */,
 				A551187829056EEA006E01DC /* AppDelegate.swift in Sources */,

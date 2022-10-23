@@ -9,12 +9,18 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    var profiles: [Profile]!
+    
     let tableView = TableView(frame: .zero, style: .plain)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .gray
+        
+        profiles = [Profile(name: "David", secondName: "Usher", age: 23),
+                    Profile(name: "Sara", secondName: "Connor", age: 19),
+                    Profile(name: "Arni", secondName: "Giga", age: 45)]
         
         setView()
         setDelegates()
@@ -48,12 +54,15 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return profiles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UITableViewCell
-        cell.textLabel?.text = "celll"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MVVMTableViewCell
+        
+        cell.cellConfigure(nameLabelText: "Name", secondNameLabelText: "Second")
+        
+        
         return cell
     }
     

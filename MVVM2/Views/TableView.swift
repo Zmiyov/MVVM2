@@ -14,7 +14,7 @@ class TableView: UITableView {
         super.init(frame: frame, style: style)
         
         configure()
-        register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        register(MVVMTableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     required init?(coder: NSCoder) {
