@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     
     func setDelegates() {
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     func setConstraints() {
@@ -42,7 +43,6 @@ class MainViewController: UIViewController {
             
         ])
     }
-
 }
 
 extension MainViewController: UITableViewDataSource {
@@ -52,24 +52,23 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfRows ?? 0
+        return viewModel?.numberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MVVMTableViewCell
         
         guard let cell = cell, let viewModel = viewModel else { return UITableViewCell() }
-        
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
-        
         cell.viewModel = cellViewModel
-        
-//        let profile = viewModel.profiles[indexPath.row]
-//        
-//        cell.cellConfigure(ageLabelText: "\(profile.age)", fullNameLabelText: "\(profile.name) \(profile.secondName)")
         
         return cell
     }
     
-    
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 }

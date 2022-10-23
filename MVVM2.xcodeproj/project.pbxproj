@@ -19,6 +19,10 @@
 		A551189629058A08006E01DC /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189529058A08006E01DC /* TableViewViewModelType.swift */; };
 		A551189B29058E1E006E01DC /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189A29058E1E006E01DC /* TableViewCellViewModelType.swift */; };
 		A551189D29058F30006E01DC /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189C29058F30006E01DC /* TableViewCellViewModel.swift */; };
+		A551189F29059732006E01DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551189E29059732006E01DC /* DetailViewController.swift */; };
+		A55118A12905978D006E01DC /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A02905978D006E01DC /* TextLabel.swift */; };
+		A55118A329059A6D006E01DC /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A229059A6D006E01DC /* DetailViewModelType.swift */; };
+		A55118A529059AD8006E01DC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55118A429059AD8006E01DC /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		A551189529058A08006E01DC /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
 		A551189A29058E1E006E01DC /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		A551189C29058F30006E01DC /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		A551189E29059732006E01DC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A55118A02905978D006E01DC /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
+		A55118A229059A6D006E01DC /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		A55118A429059AD8006E01DC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 				A551189929058B21006E01DC /* Cell */,
 				A551188C2905703D006E01DC /* TableView.swift */,
 				A551187B29056EEA006E01DC /* MainViewController.swift */,
+				A551189E29059732006E01DC /* DetailViewController.swift */,
+				A55118A02905978D006E01DC /* TextLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +114,7 @@
 			children = (
 				A55118932905890B006E01DC /* ViewModel.swift */,
 				A551189C29058F30006E01DC /* TableViewCellViewModel.swift */,
+				A55118A429059AD8006E01DC /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,6 +124,7 @@
 			children = (
 				A551189529058A08006E01DC /* TableViewViewModelType.swift */,
 				A551189A29058E1E006E01DC /* TableViewCellViewModelType.swift */,
+				A55118A229059A6D006E01DC /* DetailViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -195,14 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A551189F29059732006E01DC /* DetailViewController.swift in Sources */,
 				A551189D29058F30006E01DC /* TableViewCellViewModel.swift in Sources */,
 				A551187C29056EEA006E01DC /* MainViewController.swift in Sources */,
+				A55118A12905978D006E01DC /* TextLabel.swift in Sources */,
 				A551189629058A08006E01DC /* TableViewViewModelType.swift in Sources */,
 				A5511892290579A1006E01DC /* MVVMTableViewCell.swift in Sources */,
 				A5511890290576DD006E01DC /* Profile.swift in Sources */,
 				A551188D2905703D006E01DC /* TableView.swift in Sources */,
 				A551187829056EEA006E01DC /* AppDelegate.swift in Sources */,
+				A55118A529059AD8006E01DC /* DetailViewModel.swift in Sources */,
 				A551187A29056EEA006E01DC /* SceneDelegate.swift in Sources */,
+				A55118A329059A6D006E01DC /* DetailViewModelType.swift in Sources */,
 				A551189B29058E1E006E01DC /* TableViewCellViewModelType.swift in Sources */,
 				A55118942905890B006E01DC /* ViewModel.swift in Sources */,
 			);
